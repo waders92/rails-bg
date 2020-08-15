@@ -22,6 +22,7 @@
     <% if post.isPublishable? %>
       <div class="top-buffer">
         <p><%= post.title %></p>
+        <%= link_to 'View Post', post_path(post), class: 'btn btn-sm btn-secondary' %>
       </div>
     <% end %>
     <% end %>

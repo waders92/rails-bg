@@ -3,6 +3,7 @@
     <% @posts.each do |post| %>
       <div class="top-buffer">
         <p><%= post.title %></p>
+        <%= link_to 'Edit Post', edit_post_path(post), class: 'btn btn-sm btn-primary' %>
       </div>
     <% end %>
   </div>

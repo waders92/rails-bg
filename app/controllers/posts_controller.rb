@@ -26,6 +26,22 @@ class PostsController < ApplicationController
     return render_not_found if @post.blank?
   end
 
+  def update
+    @post = Post.find_by(id: params[:id])
+    @post.update(post_params)
+    if @post.save
+      flash.alert = 'Post was updated!'
+      redirect_to admins_path
+    else
+      render 'posts/edit'
+    end
+  end
+
+  def show
+    @post = Post.find_by(id: params[:id])
+    return render_not_found if @post.blank?
+  end
+
   private
 
   def post_params
