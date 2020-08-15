@@ -7,16 +7,30 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body>
   <div class="navigation-bar">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container">
-        <a class="navbar-brand" href="#">CodingBitz</a>
+        <a class="navbar-brand" href="/">CodingBitz</a>
       </div>
     </nav>
   </div>
+  <% if flash[:error].present? %>
+    <div class="alert alert-danger text-center notifications">
+      <%= flash[:error].html_safe %>
+    </div>
+  <% end %>
+    <% if flash[:alert].present? || flash[:notice].present? %>
+    <div class="notifications">
+      <center>
+        <p class="notice alert"><%= notice %><%= alert %></p>
+      </center>
+    </div>
+    <% end %>
     <%= yield %>
   </body>
 </html>

@@ -1,0 +1,40 @@
+  
+$notice-background-color: rgba(19, 146, 51, 0.808);
+$font-color: #fff;
+$font-size: 17px;
+
+div.alert.alert-danger.text-center.notifications {
+  background-color: firebrick;
+  border-color: firebrick;
+  color: snow;
+  border-radius: 0;
+  height: 175px;
+  padding-top: 75px;
+  margin-bottom: 0;
+  font-size: $font-size;
+}
+
+p.alert {
+  background: $notice-background-color;
+  margin-top: -10px;
+  border-radius: none;
+  color: $font-color;
+  height: 175px;
+  padding-top: 75px;
+  margin-bottom: 0;
+  font-size: $font-size;
+}
+
+p.notice {
+  background: $notice-background-color;
+  border-radius: none;
+  color: $font-color;
+  height: 175px;
+  padding-top: 75px;
+  margin-bottom: 0;
+  font-size: $font-size;
+}
+
+.alert {
+  border-radius: none !important;
+}
