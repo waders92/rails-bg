@@ -1,5 +1,5 @@
-$('document').ready(function() {
+document.addEventListener("turbolinks:load", function()  {
   setTimeout(function() {
     $('.notifications').slideUp();
-  }, 1500);
+  }, 1000);
 });
