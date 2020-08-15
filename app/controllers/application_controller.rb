@@ -6,4 +6,8 @@ class ApplicationController < ActionController::Base
       flash[:alert] = 'You are not an authorized administrator!'
     end
   end
+
+  def render_not_found(status = :not_found)
+    render plain: status.to_s.titleize.to_s, status: status
+  end
 end

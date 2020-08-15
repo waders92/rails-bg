@@ -1,20 +1,29 @@
 <div class="container top-buffer">
-  <div class="landing-page-wrapper"></div>
+  <div>
+    <% if user_signed_in? && current_user.isAdmin %>
     <div>
-      <% if user_signed_in? %>
-      <div>
-        <p>Welcome <%= current_user.email %>!</p>
-        <p>
-          <%= link_to 'Log Out', destroy_user_session_path, method: :delete %>
-        </p>
-        <%= link_to 'New Post', new_post_path, class: 'btn btn-sm btn-secondary' %>
-      </div>
-      <% else %>
-      <div>
-        <p><%= link_to 'Sign-In', new_user_session_path %></p>
-        <p><%= link_to 'Sign-Up', new_user_registration_path %></p>
-      </div>
-      <% end%>
+      <p>Welcome <%= current_user.email %>!</p>
+      <p>
+        <%= link_to 'Log Out', destroy_user_session_path, method: :delete %>
+      </p>
+      <p>
+        <%= link_to 'Admin Page', admins_path, class: 'btn btn-sm btn-secondary' %>
+      </p>
     </div>
+    <% else %>
+    <div>
+      <p><%= link_to 'Sign-In', new_user_session_path %></p>
+      <p><%= link_to 'Sign-Up', new_user_registration_path %></p>
+    </div>
+    <% end %>
+  </div>
+  <div class="posts top-buffer">
+    <% @posts.each do |post| %>
+    <% if post.isPublishable? %>
+      <div class="top-buffer">
+        <p><%= post.title %></p>
+      </div>
+    <% end %>
+    <% end %>
   </div>
 </div>
