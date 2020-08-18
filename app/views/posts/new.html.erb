@@ -8,6 +8,10 @@
           <%= f.input :title, required: true %>
         </p>
         <p>
+          <%= f.label :topic %><br />
+          <%= f.select :topic, ['Angular', 'Rails', 'JavaScript', 'MongoDB', 'ExpressJS', 'NodeJS'] %>
+        </p>
+        <p>
           <%= f.input :image %>
         </p>
         <p>

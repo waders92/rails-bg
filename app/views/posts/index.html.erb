@@ -7,7 +7,7 @@
         <%= link_to 'Log Out', destroy_user_session_path, method: :delete %>
       </p>
       <p>
-        <%= link_to 'Admin Page', admins_path, class: 'btn btn-sm btn-secondary' %>
+        <%= link_to 'Admin Page', admins_path, class: 'btn btn-sm btn-info' %>
       </p>
     </div>
     <% else %>
@@ -22,7 +22,7 @@
     <% if post.isPublishable? %>
       <div class="top-buffer">
         <p><%= post.title %></p>
-        <%= link_to 'View Post', post_path(post), class: 'btn btn-sm btn-secondary' %>
+        <%= link_to 'View Post', post_path(post), class: 'btn btn-sm btn-primary' %>
       </div>
     <% end %>
     <% end %>
