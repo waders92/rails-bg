@@ -22,6 +22,7 @@ class PostsController < ApplicationController
 
   def edit
     admin_required
+    @section = Section.new
     @post = Post.find_by(id: params[:id])
     return render_not_found if @post.blank?
   end

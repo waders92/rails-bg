@@ -21,7 +21,19 @@
       </div>
     </div>
     <br />
-    <%= f.submit 'Update', class: 'btn btn-primary submit' %>
+    <%= f.submit 'Update Post', class: 'btn btn-primary submit' %>
+    <% end %>
+  </div>
+  <div class="sections">
+    <%= simple_form_for @section, url: post_sections_path(@post) do |f| %>
+    <div class="new-section">
+      <p><%= f.input :title %></p>
+      <p><%= f.input :content %></p>
+      <p><%= f.input :gist %></p>
+    </div>
+    <div class="submit-section">
+      <%= f.submit "Add a Section", class: 'btn btn-primary active' %>
+    </div>
     <% end %>
   </div>
 </div>
