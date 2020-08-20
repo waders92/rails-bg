@@ -9,7 +9,7 @@
         </p>
         <p>
           <%= f.label :topic %><br />
-          <%= f.select :topic, ['Angular', 'Rails', 'JavaScript', 'MongoDB', 'ExpressJS', 'NodeJS'] %>
+          <%= f.select :topic, @post.post_topics %>
         </p>
         <p>
           <%= f.input :image %>
@@ -22,6 +22,6 @@
       </div>
     </div>
     <br />
-    <%= f.submit 'Create', class: 'btn btn-primary' %> <% end %>
+    <%= f.submit 'Create', class: 'btn btn-outline-primary' %> <% end %>
   </div>
 </div>

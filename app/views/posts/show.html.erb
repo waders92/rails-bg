@@ -7,7 +7,17 @@
   <div>
     <p><%= section.title %></p>
     <p><%= section.content %></p>
-    <p><%= section.gist %></p>
+    <p><script src="<%= section.gist %>"></script></p>
   </div>
   <% end %>
 </div>
+
+<!-- <script>
+  document.addEventListener("turbolinks:load", function()  {
+    console.log("hello");
+    var gistId = document.getElementById('gist');
+    var new_script = document.createElement('script');
+    new_script.setAttribute('src', 'https://gist.github.com/waders92/8a3669b65d071ae9298d74bdb7d36576.js');
+    gistId.appendChild(new_script);
+  })
+</script> -->
