@@ -17,14 +17,20 @@
     </div>
     <% end %>
   </div>
-  <div class="posts top-buffer">
-    <% @posts.each do |post| %>
-    <% if post.isPublishable? %>
-      <div class="top-buffer">
-        <p><%= post.title %></p>
-        <%= link_to 'View Post', post_path(post), class: 'btn btn-sm btn-outline-primary' %>
+
+  <% @posts.each do |post| %>
+  <% if post.isPublishable? %>
+  <%= link_to post_path(post) do %>
+    <div class="card col-md">
+      <div class="container post-preview-wrapper">
+      <span class="post-details"><h4><b><%= post.title %></b></h4><span class="post-image"><img src="/images/{{image}}.png" class="img-responsive"></span>
+      <p class="post-date"><i><%= post.post_date %></i></p>
+        <div class="post-preview">
+         <%= post.first_section_content %>
+        </div>
       </div>
-    <% end %>
-    <% end %>
-  </div>
+    </div>
+  <% end %>
+  <% end %>
+  <% end %>
 </div>
