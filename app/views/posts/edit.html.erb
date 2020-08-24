@@ -45,7 +45,7 @@
     <div class="new-section top-buffer">
       <p><%= section.title %></p>
       <p><%= section.content %></p>
-      <p><script async defer src="<%= section.gist %>"></script></p>
+      <p><script src="<%= section.gist %>"></script></p>
     </div>
     <div class="edit-section">
       <%= link_to 'Edit Section', edit_post_section_path(@post, section), class: 'btn btn-outline-primary' %>

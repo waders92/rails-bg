@@ -1,4 +1,4 @@
-document.addEventListener("turbolinks:load", function()  {
+$(document).ready(function() {
   setTimeout(function() {
     $('.notifications').slideUp();
   }, 1000);
