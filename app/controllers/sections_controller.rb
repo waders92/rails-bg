@@ -1,6 +1,11 @@
 class SectionsController < ApplicationController
   before_action :admin_required
 
+  def new
+    @post = Post.find(params[:post_id])
+    @section = Section.new
+  end
+
   def create
     @post = Post.find(params[:post_id])
     @post.sections.create(section_params.merge(user: current_user))
@@ -25,4 +30,3 @@ class SectionsController < ApplicationController
     params.require(:section).permit(:title, :content, :gist)
   end
 end
-

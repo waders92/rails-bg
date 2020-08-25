@@ -1,3 +1,59 @@
 .top-buffer {
   margin-top: 50px;
 }
+
+.bottom-buffer {
+  margin-bottom: 50px;
+}
+
+.header-section {
+  margin-top: 100px;
+}
+
+.header-section a:hover {
+  text-decoration: none;
+}
+
+.header-description {
+  line-height: 20px;
+  margin-top: 8px;
+  margin-bottom: 25px;
+  color: #676c72;
+}
+
+.header-description a {
+  color: #676c72;
+}
+
+.header-description a:hover {
+  color: #007bff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.header-description a:visited {
+  color: #676c72;
+}
+
+.title-first {
+  color: #007bff;
+}
+
+.title-last {
+  color: dimgray;
+}
+
+.about-section {
+  margin-top: 50px;
+}
+
+span.about-content {
+  font-style: italic;
+  font-weight: bolder;
+  color: #007bff;
+}
+
+.profile-image{
+  width: 15%;
+  border-radius: 100%;
+}

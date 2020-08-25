@@ -20,10 +20,10 @@
 
   <% @posts.each do |post| %>
   <% if post.isPublishable? %>
-  <%= link_to post_path(post) do %>
+  <%= link_to post_path(post), class: 'post-link' do %>
     <div class="card col-md">
       <div class="container post-preview-wrapper">
-      <span class="post-details"><h4><b><%= post.title %></b></h4><span class="post-image"><img src="/images/{{image}}.png" class="img-responsive"></span>
+      <span class="post-details"><h4><b><%= post.title %></b></h4><span class="post-image"><%= image_tag(post.topic_image) %></span>
       <p class="post-date"><i><%= post.post_date %></i></p>
         <div class="post-preview">
          <%= post.first_section_content %>

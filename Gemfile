@@ -12,8 +12,8 @@ gem 'rails', '~> 6.0.3', '>= 6.0.3.1'
 gem 'rubocop', '~> 0.89.1', require: false
 gem 'sass-rails', '>= 6'
 gem 'simple_form'
-gem 'sprockets-rails', :require => 'sprockets/railtie'
 gem 'sprockets'
+gem 'sprockets-rails', require: 'sprockets/railtie'
 gem 'sqlite3', '~> 1.3', '>= 1.3.11'
 gem 'webpacker', '~> 4.0'
 

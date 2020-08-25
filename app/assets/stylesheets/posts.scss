@@ -38,7 +38,18 @@
   display: inline;
 }
 
+.post-image img, .post-image-details img {
+  float: right;
+  width: 10%;
+}
+
 a.post-link:hover, a.home-link:hover {
   cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+a.post-link {
+  color: black;
   text-decoration: none;
 }

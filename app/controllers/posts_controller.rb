@@ -22,7 +22,6 @@ class PostsController < ApplicationController
 
   def edit
     admin_required
-    @section = Section.new
     @post = Post.find_by(id: params[:id])
     return render_not_found if @post.blank?
   end
@@ -35,6 +34,7 @@ class PostsController < ApplicationController
       flash.alert = 'Post was updated!'
       redirect_to admins_path
     else
+      flash.alert = 'Post NOT Updted!'
       render 'posts/edit'
     end
   end
@@ -51,6 +51,8 @@ class PostsController < ApplicationController
     flash.alert = 'Post was deleted!'
     redirect_to admins_path
   end
+
+  def about; end
 
   private
 
