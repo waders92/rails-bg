@@ -5,6 +5,7 @@ ruby '2.6.3'
 
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'bootstrap', '~> 5.0.0.alpha1'
+gem 'carrierwave', '~> 1.0'
 gem 'devise'
 gem 'jbuilder', '~> 2.7'
 gem 'puma', '~> 4.1'

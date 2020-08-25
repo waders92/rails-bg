@@ -1,6 +1,7 @@
 class Post < ApplicationRecord
   belongs_to :user, optional: true
   has_many :sections, dependent: :destroy
+  has_many :images, dependent: :destroy
 
   def post_topics
     %w[Angular Rails JavaScript MongoDB Express Node]

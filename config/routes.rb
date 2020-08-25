@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   resources :admins, only: [:index]
   resources :posts do
     resources :sections
+    resources :images
   end
 end

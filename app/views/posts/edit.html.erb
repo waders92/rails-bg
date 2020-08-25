@@ -12,9 +12,6 @@
           <%= f.select :topic, @post.post_topics %>
         </p>
         <p>
-          <%= f.input :image %>
-        </p>
-        <p>
           <%= f.check_box :isPublishable, checked_value: true, unchecked_value: false %>
           <span class="label-text">Do you want to publish this post?</span>
         </p>
@@ -24,6 +21,14 @@
     <%= f.submit 'Update Post', class: 'btn btn-outline-primary submit' %>
     <% end %>
   </div>
+  <hr>
+  <div class="top-buffer">
+    <h4>Add Post Image</h4> 
+  </div>
+  <div class="top-buffer">
+    <%= link_to 'Add A Post Image', new_post_image_path(@post), class: 'btn btn-outline-primary' %>
+  </div>
+  <hr>
   <div class="top-buffer">
     <h4>Add Post Sections</h4> 
   </div>
