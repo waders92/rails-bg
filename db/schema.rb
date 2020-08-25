@@ -10,14 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_25_195708) do
+ActiveRecord::Schema.define(version: 2020_08_25_203122) do
 
   create_table "images", force: :cascade do |t|
     t.text "caption"
     t.integer "post_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "image"
+    t.string "photo"
+    t.integer "user_id"
   end
 
   create_table "posts", force: :cascade do |t|

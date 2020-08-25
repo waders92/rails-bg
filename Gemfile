@@ -8,6 +8,7 @@ gem 'bootstrap', '~> 5.0.0.alpha1'
 gem 'carrierwave', '~> 1.0'
 gem 'devise'
 gem 'jbuilder', '~> 2.7'
+gem 'mini_magick'
 gem 'puma', '~> 4.1'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.1'
 gem 'rubocop', '~> 0.89.1', require: false

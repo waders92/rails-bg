@@ -22,6 +22,9 @@
     <% end %>
   </div>
   <hr>
+  <% if @post.images %>
+  <div></div>
+  <% else %>
   <div class="top-buffer">
     <h4>Add Post Image</h4> 
   </div>
@@ -29,6 +32,7 @@
     <%= link_to 'Add A Post Image', new_post_image_path(@post), class: 'btn btn-outline-primary' %>
   </div>
   <hr>
+  <% end %>
   <div class="top-buffer">
     <h4>Add Post Sections</h4> 
   </div>
@@ -36,6 +40,22 @@
     <%= link_to 'Add A Post Section', new_post_section_path(@post), class: 'btn btn-outline-primary' %>
   </div>
   <hr class="top-buffer">
+  <% if @post.images %>
+  <% @post.images.each do |image| %>
+  <div class="image-section">
+    <p>Post Image</p>
+    <div class="bottom-buffer">
+      <%= image_tag image.photo.url, class: 'img-responsive' %>
+    </div>
+    <div class="bottom-buffer">
+      <%= image.caption %>
+    </div>
+    <div class="edit-section">
+      <%= link_to 'Edit Image', edit_post_image_path(@post, image), class: 'btn btn-outline-primary' %>
+    </div>
+  </div>
+  <% end %>
+  <% end %>
   <div class="sections top-buffer">
     <% if @post.sections %>
     <% @post.sections.each do |section| %>
