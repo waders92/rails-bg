@@ -1,12 +1,12 @@
-<div class="container top-buffer">
-  <h5><%= @post.title %></h5>
-  <p><%= @post.topic %></p>
+<div class="container top-buffer bottom-buffer">
+  <span class="post-details"><h4 class='title'><%= @post.title %></h4><span class="post-image"><%= image_tag(@post.topic_image) %></span>
+  <p><%= @post.post_date %></p>
 </div>
 <div class="sections container top-buffer">
   <% @post.sections.each do |section| %>
-  <div>
-    <p><%= section.title %></p>
-    <p><%= section.content %></p>
+  <div class="bottom-buffer">
+    <p class="title"><%= section.title %></p>
+    <p class="section-content"><%= section.content %></p>
     <p><script src="<%= section.gist %>"></script></p>
   </div>
   <% end %>
