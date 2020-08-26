@@ -1,0 +1,12 @@
+<div class="container sections top-buffer">
+  <h5>Add Post Image for <%= @post.title %></h5>
+  <%= simple_form_for @image, url: post_image_path(@post) do |f| %>
+  <div class="new-section">
+    <p><%= f.input :photo %></p>
+    <p><%= f.input :caption %></p>
+  </div>
+  <div class="submit-section">
+    <%= f.submit "Update Image", class: 'btn btn-outline-primary' %>
+  </div>
+  <% end %>
+</div>

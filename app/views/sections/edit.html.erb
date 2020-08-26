@@ -1,0 +1,13 @@
+<div class="container sections top-buffer">
+  <h5>Edit Post Section!</h5>
+  <%= simple_form_for @section, url: post_section_path(@post) do |f| %>
+  <div class="new-section">
+    <p><%= f.input :title %></p>
+    <p><%= f.input :content %></p>
+    <p><%= f.input :gist %></p>
+  </div>
+  <div class="submit-section">
+    <%= f.submit "Update Section", class: 'btn btn-outline-primary' %>
+  </div>
+  <% end %>
+</div>

@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="top-buffer bottom-buffer">
+    <span class="post-details"><h4 class='title'><%= @post.title %></h4><span class="post-image"><%= image_tag(@post.topic_image) %></span>
+    <p><%= @post.post_date %></p>
+  </div>
+  <% if @post.images %>
+  <% @post.images.each do |image| %>
+  <div class="image-section">
+    <div class="bottom-buffer">
+      <%= image_tag image.photo.url, class: 'img-responsive' %>
+    </div>
+    <div class="bottom-buffer">
+      <%= image.caption %>
+    </div>
+  </div>
+  <% end %>
+  <% end %>
+  <div class="sections top-buffer">
+    <% @post.sections.each do |section| %>
+    <div class="bottom-buffer">
+      <p class="title"><%= section.title %></p>
+      <p class="section-content"><%= section.content %></p>
+      <p><script src="<%= section.gist %>"></script></p>
+    </div>
+    <% end %>
+  </div>
+</div>

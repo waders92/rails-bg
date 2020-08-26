@@ -7,16 +7,47 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   </head>
 
   <body>
-  <div class="navigation-bar">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container">
-        <a class="navbar-brand" href="#">CodingBitz</a>
+    <div class="header-section col-lg-10 col-md-10 col-sm-10 col-xs-10 offset-lg-1 offset-md-1 offset-sm-1 offset-xs-1">
+      <a href="/">
+      <div class="header-title">
+        <h1><span class="title-first">Coding</span><span class="title-last">Bitz</span></h1>
       </div>
-    </nav>
-  </div>
+      </a>
+      <div class="header-description">
+        <p>A blog to share snippets of code by <a href="/about"><span class="highlight initials">WC</span></a></p>
+        <hr>
+      </div>
+    </div>
+
+  <% if flash[:error].present? %>
+    <div class="alert alert-danger text-center notifications">
+      <%= flash[:error].html_safe %>
+    </div>
+  <% end %>
+  <% if flash[:alert].present? || flash[:notice].present? %>
+    <div class="notifications">
+      <center>
+        <p class="notice alert"><%= notice %><%= alert %></p>
+      </center>
+    </div>
+  <% end %>
+ 
+  <div id="wrapper">
     <%= yield %>
+  </div>
+
+    <div class="footer-content">
+      <div>
+        <div class="col-sm text-center">
+          <span><p id="year"><b>Coding Bitz &copy <%= Date.today.year %></b></p></span>
+        </div>
+      </div>
+    </div>
+  </div>
   </body>
 </html>
