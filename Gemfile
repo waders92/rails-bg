@@ -20,6 +20,7 @@ gem 'sprockets'
 gem 'sprockets-rails', require: 'sprockets/railtie'
 gem 'sqlite3', '~> 1.3', '>= 1.3.11'
 gem 'webpacker', '~> 4.0'
+gem 'will_paginate', '~> 3.1.0'
 
 group :production do
   gem 'rails_12factor'
