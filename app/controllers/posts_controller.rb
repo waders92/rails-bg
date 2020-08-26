@@ -2,7 +2,13 @@ class PostsController < ApplicationController
   # before_action :authenticate_user!, only: %i[new create show edit update destroy]
 
   def index
-    @posts = Post.all
+    @posts = if params[:term]
+               Post.where('LOWER(title) LIKE ?', "%#{params[:term].downcase}%").order('title ASC')
+              else
+               @posts = Post.all.order('title ASC')
+             end
+             
+    @total_posts = @posts.count
   end
 
   def new
