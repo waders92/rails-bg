@@ -34,10 +34,8 @@
     <div>
       <p>Welcome <%= current_user.email %>!</p>
       <p>
-        <%= link_to 'Log Out', destroy_user_session_path, method: :delete %>
-      </p>
-      <p>
         <%= link_to 'Admin Page', admins_path, class: 'btn btn-sm btn-outline-primary' %>
+        <%= link_to 'Log Out', destroy_user_session_path, method: :delete, class: 'btn btn-sm btn-outline-primary' %>
       </p>
     </div>
     <% else %>

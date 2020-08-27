@@ -10,6 +10,10 @@ h2.title {
   display: inline;
 }
 
+h1.title {
+  font-weight: 100;
+}
+
 h5.recent-post-info {
   font-weight: 300;
 }
@@ -81,4 +85,8 @@ a.post-link {
 .post-show {
   padding-left: 0 !important;
   padding-right: 0 !important;
+}
+
+.post-new-btn {
+  margin-top: 15px;
 }
