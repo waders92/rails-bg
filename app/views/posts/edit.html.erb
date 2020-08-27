@@ -44,10 +44,10 @@
   <% @post.images.each do |image| %>
   <div class="image-section">
     <p>Post Image</p>
-    <div class="bottom-buffer">
-      <%= image_tag image.photo.url, class: 'img-fluid' %>
+    <div>
+      <%= image_tag(image.photo.url, class: "img-fluid") %>
     </div>
-    <div class="bottom-buffer">
+    <div class="caption-buffer">
       <%= image.caption %>
     </div>
     <div class="edit-section">
@@ -60,9 +60,9 @@
     <% if @post.sections %>
     <% @post.sections.each do |section| %>
     <div class="new-section top-buffer">
-      <p><%= section.title %></p>
-      <p><%= section.content %></p>
-      <p><script src="<%= section.gist %>"></script></p>
+      <p class="section-title"><%= section.title %></p>
+      <p class="section-content"><%= section.content %></p>
+      <p class="section-gist"><script src="<%= section.gist %>"></script></p>
     </div>
     <div class="edit-section">
       <%= link_to 'Edit Section', edit_post_section_path(@post, section), class: 'btn btn-outline-primary' %>

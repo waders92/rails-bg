@@ -29,7 +29,7 @@ class PostsController < ApplicationController
   def edit
     admin_required
     @post = Post.find_by(id: params[:id])
-    return render_not_found if @post.blank?
+    flash.alert = 'Post was not found' if @post.blank?
   end
 
   def update

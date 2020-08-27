@@ -1,5 +1,6 @@
-  
-$notice-background-color: rgba(19, 76, 146, 0.808);
+@import 'constants';  
+
+$notice-background-color: $notice-color;
 $font-color: #fff;
 $font-size: 17px;
 

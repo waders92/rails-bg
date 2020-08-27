@@ -3,6 +3,7 @@
     <h5>Admins Page</h5>
     <%= link_to 'Add New Post', new_post_path ,class: 'btn btn-outline-primary btn-sm' %>
   </div>
+  <hr>
   <div class="posts top-buffer">
     <% @posts.each do |post| %>
       <div class="top-buffer">
@@ -10,6 +11,7 @@
         <%= link_to 'Edit Post', edit_post_path(post), class: 'btn btn-sm btn-outline-primary' %>
         <%= link_to 'Destroy', post_path(post), method: :delete, data: {confirm: 'Are you sure you want to delete this?'},class: 'btn btn-outline-danger btn-sm' %>
       </div>
+      <hr>
     <% end %>
   </div>
 </div>
