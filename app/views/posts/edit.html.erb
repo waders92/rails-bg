@@ -1,4 +1,4 @@
-<div class="container top-buffer">
+<div class="container top-buffer col-lg-10 col-md-10 col-sm-10 col-xs-10 offset-lg-1 offset-md-1 offset-sm-1 offset-xs-1">
   <div>
     <h5>Edit Post!</h5>
     <%= simple_form_for @post do |f| %> <%= f.error_notification %>
@@ -45,7 +45,7 @@
   <div class="image-section">
     <p>Post Image</p>
     <div class="bottom-buffer">
-      <%= image_tag image.photo.url, class: 'img-responsive' %>
+      <%= image_tag image.photo.url, class: 'img-fluid' %>
     </div>
     <div class="bottom-buffer">
       <%= image.caption %>
