@@ -1,25 +1,28 @@
-<div class="container col-lg-10 col-md-10 col-sm-10 col-xs-10 offset-lg-1 offset-md-1 offset-sm-1 offset-xs-1">
+<div class="post-show container col-lg-10 col-md-10 col-sm-10 col-xs-10 offset-lg-1 offset-md-1 offset-sm-1 offset-xs-1">
   <div class="top-buffer bottom-buffer">
-    <span class="post-details"><h4 class='title'><%= @post.title %></h4><span class="post-image"><%= image_tag(@post.topic_image) %></span>
-    <p><%= @post.post_date %></p>
+    <span class="post-details"><h2 class='title'><%= @post.title %></h2><span class="post-image"><%= image_tag(@post.topic_image) %></span>
+    <p class="post-date"><%= @post.post_date %></p>
   </div>
   <% if @post.images %>
   <% @post.images.each do |image| %>
-    <div class="bottom-buffer">
-      <%= image_tag(image.photo.url, class: "img-fluid") %>
-    </div>
-    <div class="bottom-buffer">
-      <%= image.caption %>
-    </div>
+  <div>
+    <%= image_tag(image.photo.url, class: "img-fluid") %>
+  </div>
+  <div class="caption-buffer">
+    <%= image.caption %>
+  </div>
   <% end %>
   <% end %>
   <div class="sections top-buffer">
     <% @post.sections.each do |section| %>
     <div class="bottom-buffer">
-      <p class="title"><%= section.title %></p>
+      <p class="section-title"><%= section.title %></p>
       <p class="section-content"><%= section.content %></p>
-      <p><script src="<%= section.gist %>"></script></p>
+      <p class="section-gist"><script src="<%= section.gist %>"></script></p>
     </div>
     <% end %>
+  </div>
+  <div class="back-button top-buffer">
+    <%= link_to 'Back To Index', root_path, class: 'btn btn-sm btn-outline-primary' %>
   </div>
 </div>

@@ -1,11 +1,11 @@
 @import 'constants';
 
 .top-buffer {
-  margin-top: 50px;
+  margin-top: $standard-margin;
 }
 
 .bottom-buffer {
-  margin-bottom: 50px;
+  margin-bottom: $standard-margin;
 }
 
 .header-section {
@@ -20,11 +20,12 @@
   line-height: 20px;
   margin-top: 8px;
   margin-bottom: 25px;
-  color: #3f474e;
+  color: #676c72;
 }
 
 .initials {
   color: $base-color;
+  font-weight: 100;
 }
 
 .header-description a {
@@ -43,6 +44,12 @@
 
 .title-first {
   color: $base-color;
+
+  a {
+    &:hover {
+      color: $base-color;
+    }
+  }
 }
 
 .title-last {
