@@ -1,3 +1,5 @@
+@import 'constants';
+
 .top-buffer {
   margin-top: 50px;
 }
@@ -18,42 +20,31 @@
   line-height: 20px;
   margin-top: 8px;
   margin-bottom: 25px;
-  color: #676c72;
+  color: #3f474e;
+}
+
+.initials {
+  color: $base-color;
 }
 
 .header-description a {
-  color: #676c72;
+  color: $base-offset-color;
 }
 
 .header-description a:hover {
-  color: #007bff;
+  color: $base-color;
   text-decoration: none;
   cursor: pointer;
 }
 
 .header-description a:visited {
-  color: #676c72;
+  color: $base-offset-color;
 }
 
 .title-first {
-  color: #007bff;
+  color: $base-color;
 }
 
 .title-last {
-  color: dimgray;
-}
-
-.about-section {
-  margin-top: 50px;
-}
-
-span.about-content {
-  font-style: italic;
-  font-weight: bolder;
-  color: #007bff;
-}
-
-.profile-image{
-  width: 15%;
-  border-radius: 100%;
+  color: $base-offset-color;
 }
