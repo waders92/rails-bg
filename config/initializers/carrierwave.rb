@@ -5,8 +5,8 @@ CarrierWave.configure do |config|
   config.aws_acl     = :public_read
 
   config.aws_credentials = {                       
-    aws_access_key_id:     ENV["AWS_ACCESS_KEY"],        
-    aws_secret_access_key: ENV["AWS_SECRET_KEY"],        
+    access_key_id:      ENV["AWS_ACCESS_KEY"],        
+    secret_access_key:  ENV["AWS_SECRET_KEY"],        
   }
 
 end
