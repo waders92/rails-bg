@@ -18,7 +18,6 @@ gem 'sass-rails', '>= 6'
 gem 'simple_form'
 gem 'sprockets'
 gem 'sprockets-rails', require: 'sprockets/railtie'
-gem 'sqlite3', '~> 1.3', '>= 1.3.11'
 gem 'webpacker', '~> 4.0'
 gem 'will_paginate', '~> 3.1.0'
 
@@ -29,6 +28,7 @@ end
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'sqlite3', '~> 1.3', '>= 1.3.11'
 end
 
 group :development do
