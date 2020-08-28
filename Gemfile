@@ -16,7 +16,6 @@ gem 'rails', '~> 6.0.3', '>= 6.0.3.1'
 gem 'rubocop', '~> 0.89.1', require: false
 gem 'sass-rails', '>= 6'
 gem 'simple_form'
-gem 'sqlite3', '~> 1.3', '>= 1.3.11'
 gem 'sprockets'
 gem 'sprockets-rails', require: 'sprockets/railtie'
 gem 'webpacker', '~> 4.0'
@@ -24,6 +23,7 @@ gem 'will_paginate', '~> 3.1.0'
 
 group :production do
   gem 'rails_12factor'
+  gem 'pg'
 end
 
 group :development, :test do
