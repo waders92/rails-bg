@@ -8,6 +8,7 @@ class Post < ApplicationRecord
   end
 
   def first_section_content
+    self.sections.order('created_at ASC')
     sections[0].content
   end
 
