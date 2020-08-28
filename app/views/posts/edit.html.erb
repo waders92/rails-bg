@@ -58,7 +58,7 @@
   <% end %>
   <div class="sections top-buffer">
     <% if @post.sections %>
-    <% @post.sections.each do |section| %>
+    <% @post.sections.order('created_at ASC').each do |section| %>
     <div class="new-section top-buffer">
       <p class="section-title"><%= section.title %></p>
       <p class="section-content"><%= section.content.html_safe %></p>
