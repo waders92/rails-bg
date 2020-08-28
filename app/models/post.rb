@@ -1,6 +1,6 @@
 class Post < ApplicationRecord
   belongs_to :user, optional: true
-  has_many :sections, dependent: :destroy
+  has_many :sections, dependent: :destroy, :order => 'created_at ASC'
   has_many :images, dependent: :destroy
 
   def post_topics
