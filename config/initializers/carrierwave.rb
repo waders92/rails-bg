@@ -4,10 +4,10 @@ CarrierWave.configure do |config|
   config.aws_bucket  = ENV["AWS_BUCKET"] 
   config.aws_acl     = :public_read
 
-  config.fog_credentials = {
+  config.aws_credentials = {
     provider:              'AWS',                        
     aws_access_key_id:     ENV["AWS_ACCESS_KEY"],        
     aws_secret_access_key: ENV["AWS_SECRET_KEY"],        
   }
-              
+
 end
