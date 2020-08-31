@@ -5,11 +5,13 @@
   </div>
   <% if @post.images %>
   <% @post.images.each do |image| %>
-  <div>
-    <%= image_tag(image.photo.url, class: "img-fluid") %>
-  </div>
-  <div class="caption-buffer">
-    <%= image.caption %>
+  <div class="image-wrapper container">
+    <div>
+      <%= image_tag(image.photo.url, class: "img-fluid") %>
+    </div>
+    <div class="caption-buffer">
+      <%= image.caption %>
+    </div>
   </div>
   <% end %>
   <% end %>
