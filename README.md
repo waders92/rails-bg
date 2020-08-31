@@ -1,4 +1,9 @@
-# README
+# Coding Blog
 
-Blog platform to share snippets of code.
-Created with Rails. Image uploading provided with Carrierwave and Amazon S3 for production storage.
+Blog platform to share snippets of code. CodingBitz is created with Ruby/Rails.
+
+Highlights....
+
+1. Image uploading for posts, production images stored on Amazon S3
+2. Pagination implemented
+3. Hosted on Heroku
