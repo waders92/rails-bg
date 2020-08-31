@@ -18,13 +18,13 @@
   <div class="sections top-buffer">
     <% @post.sections.order('created_at ASC').each do |section| %>
     <div class="bottom-buffer">
-      <p class="section-title"><%= section.title %></p>
+      <p class="section-title"><b><%= section.title %></b></p>
       <p class="section-content"><%= section.content.html_safe %></p>
       <p class="section-gist"><script src="<%= section.gist %>"></script></p>
     </div>
     <% end %>
   </div>
   <div class="back-button top-buffer">
-    <%= link_to 'Back To Index', root_path, class: 'btn btn-sm btn-outline-primary' %>
+    <%= link_to 'Back To Index', root_path, class: 'btn btn-md btn-outline-primary' %>
   </div>
 </div>
