@@ -9,7 +9,7 @@ class Post < ApplicationRecord
 
   def first_section_content
     self.sections.order('created_at ASC')
-    sections[0].content
+    return sections.first.content
   end
 
   def post_date
