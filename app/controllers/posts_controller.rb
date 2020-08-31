@@ -3,9 +3,9 @@ class PostsController < ApplicationController
 
   def index
     @posts = if params[:term]
-      Post.where('LOWER(title) LIKE ?', "%#{params[:term].downcase}%").order('created_at ASC').paginate(page: params[:page], per_page: 5)
+      Post.where('LOWER(title) LIKE ?', "%#{params[:term].downcase}%").order('created_at DESC').paginate(page: params[:page], per_page: 5)
       else
-        @posts = Post.all.order('created_at ASC').paginate(page: params[:page], per_page: 5)
+        @posts = Post.all.order('created_at DESC').paginate(page: params[:page], per_page: 5)
       end
              
     @total_posts = @posts.count
