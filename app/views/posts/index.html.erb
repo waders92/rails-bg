@@ -18,7 +18,7 @@
       <%= link_to post_path(post), class: 'post-link' do %>
         <div class="card col-md">
         <div class="container post-preview-wrapper">
-        <span class="post-details recent-post-info"><h2 class="title"><b><%= post.title %></b></h2><span class="post-image"><%= image_tag(post.topic_image) %></span>
+        <span class="post-details recent-post-info"><h2 class="title"><%= post.title %></h2><span class="post-image"><%= image_tag(post.topic_image) %></span>
           <p class="post-date"><i><%= post.post_date %></i></p>
           <div class="post-preview">
             <%= post.first_section_content.html_safe %>
