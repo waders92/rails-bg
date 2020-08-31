@@ -55,3 +55,9 @@
 .title-last {
   color: $base-offset-color;
 }
+
+@media only screen and (max-width: 800px) {
+  body {
+    padding: 10px;
+  }
+}
