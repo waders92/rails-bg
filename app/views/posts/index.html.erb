@@ -1,20 +1,4 @@
 <div class="container top-buffer">
-  <div clas="last-post">
-    <h3 class="title"><%= @last_post.title %></h3>
-    <p class="post-date"><i><%= @last_post.post_date %></i></p>
-    <div class="sections top-buffer">
-      <div class="bottom-buffer">
-        <p class="section-title"><b><%= @last_post.first_section.title %></b></p>
-        <p class="section-content"><%= @last_post.first_section.content.html_safe %></p>
-        <p class="section-gist"><script src="<%= @last_post.first_section.gist %>"></script></p>
-        <br>
-        <p class="section-title"><b><%= @last_post.sections[1].title %></b></p>
-        <p class="section-content post-preview"><%= @last_post.sections[1].content %></p>
-        <%= link_to 'Continue Reading', post_path(@last_post), class: 'btn btn-md btn-outline-primary' %>
-      </div>
-    </div>
-  </div>
-  <hr style="margin: 100px;">
   <div class="row recent-post-wrapper top-buffer bottom-buffer">
     <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
       <h5 class='recent-post-info'>Recent Posts (<%= @total_posts %>)</h5>
