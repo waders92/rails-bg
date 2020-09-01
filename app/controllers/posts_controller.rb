@@ -2,6 +2,7 @@ class PostsController < ApplicationController
   # before_action :authenticate_user!, only: %i[new create show edit update destroy]
 
   def index
+    @last_post = Post.last
     @posts = if params[:term]
       Post.where('LOWER(title) LIKE ?', "%#{params[:term].downcase}%").order('created_at DESC').paginate(page: params[:page], per_page: 5)
       else
