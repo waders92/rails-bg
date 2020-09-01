@@ -16,6 +16,11 @@ class Post < ApplicationRecord
     created_at.strftime('%b %d, %Y')
   end
 
+  def first_photo
+    self.images.order('created_at ASC')
+    return images.first
+  end
+
   def topic_image
     return unless topic
 
