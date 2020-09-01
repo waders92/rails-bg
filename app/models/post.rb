@@ -7,9 +7,9 @@ class Post < ApplicationRecord
     %w[Angular Rails JavaScript MongoDB Express Node]
   end
 
-  def first_section_content
+  def first_section
     self.sections.order('created_at ASC')
-    return sections.first.content
+    return sections.first
   end
 
   def post_date

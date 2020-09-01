@@ -4,17 +4,12 @@
   margin-left: 10px;
 }
 
-h2.title {
-  font-weight: 300;
+h2.title, h3.title {
   font-size: 30px;
   display: inline;
 }
 
-h1.title {
-  font-weight: 300;
-}
-
-h5.recent-post-info {
+h1.title, h2.title, h3.title , h5.recent-post-info {
   font-weight: 300;
 }
 
