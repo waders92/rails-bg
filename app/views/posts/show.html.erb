@@ -1,11 +1,11 @@
 <div class="post-show container">
   <div class="top-buffer bottom-buffer">
-    <span class="post-details"><h1 class='title'><%= @post.title %></h1><span class="post-image"><%= image_tag(@post.topic_image) %></span>
+    <span class="post-details"><h3 class='title'><%= @post.title %></h1><span class="post-image"><%= image_tag(@post.topic_image) %></span>
     <p class="post-date"><%= @post.post_date %></p>
   </div>
   <% if @post.images %>
   <% @post.images.each do |image| %>
-  <div class="image-wrapper container">
+  <div class="image-wrapper">
     <div>
       <%= image_tag(image.photo.url, class: "img-fluid") %>
     </div>
