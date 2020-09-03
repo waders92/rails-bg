@@ -19,7 +19,7 @@
       <% if post.isPublishable? %>
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
           <%= link_to post_path(post), class: 'post-link' do %>
-          <div class="card h-100">
+          <div class="card h-90">
             <%= image_tag(post.first_photo.photo.url, class: 'img-fluid') %>
             <div class="container post-preview-wrapper">
             <span class="post-details recent-post-info"><h3 class="title"><%= post.title %></h3><span class="post-image"><%= image_tag(post.topic_image) %></span>
